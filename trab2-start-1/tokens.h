@@ -1,0 +1,17 @@
+#define NUM 256
+#define ID 257
+#define INT 258
+#define GE 259
+#define IF 260
+#define FOR 261
+#define WHILE 262
+#define CHAR 263
+#define FLOAT 264
+#define VOID 265
+#define GF 266
+#define GG 267
+#define AND 268
+#define OR 269
+#define NOT 270
+#define ELSE 271
+#define RETURN 272
