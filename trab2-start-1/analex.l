@@ -40,8 +40,9 @@ letra [a-zA-Z_]
 "<"   {return '<';}
 "|"   {return '|';}
 "%"   {return '%';}
-
-
+"["	  {return '[';}
+"]"	  {return ']';}
+"([^"\]|\.)*"  { return STR; }
 
 
 
