@@ -15,4 +15,4 @@
 #define NOT 270
 #define ELSE 271
 #define RETURN 272
-#define RETURN 273
+#define STR 273
