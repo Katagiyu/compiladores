@@ -42,9 +42,15 @@ letra [a-zA-Z_]
 "%"   {return '%';}
 "["	  {return '[';}
 "]"	  {return ']';}
-"([^"\]|\.)*"  { return STR; }
+"\""  { return '"'; }
+"\\"  { return '\\'; }
+"#"   { return '#'; }
+"."   { return '.'; }
+"["   { return '['; }
+"]"   { return ']'; }
+"'"   { return '\''; }
 
-
+\"([^\"\\\\]|\\.)*\"    { return STR; }
 
 {dig}+("."{dig}+)?	{ return NUM;}
 {letra}({letra}|{dig})*  { insere(yytext);
