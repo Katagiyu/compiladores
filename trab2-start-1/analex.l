@@ -7,6 +7,7 @@ int linha = 1;
 dig [0-9]
 letra [a-zA-Z_]
 %%
+\"([^\"\\\\]|\\.)*\"    { return STR; }
 
 "int"  {return INT;}
 "if"	{return IF;}	
@@ -50,7 +51,6 @@ letra [a-zA-Z_]
 "]"   { return ']'; }
 "'"   { return '\''; }
 
-\"([^\"\\\\]|\\.)*\"    { return STR; }
 
 {dig}+("."{dig}+)?	{ return NUM;}
 {letra}({letra}|{dig})*  { insere(yytext);
