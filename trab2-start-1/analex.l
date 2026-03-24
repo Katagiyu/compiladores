@@ -7,24 +7,22 @@ int linha = 1;
 dig [0-9]
 letra [a-zA-Z_]
 %%
-\"([^\"\\\\]|\\.)*\"    { return STR; }
-
-"int"  {return INT;}
-"if"	{return IF;}	
-"else"	{return ELSE;}
-"for"	{return FOR;}
-"while"	{return WHILE;}
-"char" {return CHAR;}
-"void" {return VOID;}
-"float" {return FLOAT;}
+"int" 	 {return INT;}
+"if"	 {return IF;}
+"else"	 {return ELSE;}
+"for"	 {return FOR;}
+"while"	 {return WHILE;}
+"char"	 {return CHAR;}
+"void"	 {return VOID;}
+"float"	 {return FLOAT;}
 "return" {return RETURN;}
-"!" {return NOT;}
-"||" {return OR;}
-"&&" {return AND;}
+"!"   {return 'NOT';}
+"||"  {return 'OR';}
+"&&"  {return 'AND';}
 
-">="  {return GE;} 	
-"<="  {return GF;} 
-"=="  {return GG;} 
+">="  {return GE;}
+"<="  {return GF;}
+"=="  {return GG;}
 
 "("	  {return '(';}
 ")"   {return ')';}
@@ -37,19 +35,17 @@ letra [a-zA-Z_]
 "-"   {return '-';}
 "/"   {return '/';}
 "*"   {return '*';}
-">"   {return '>';}
 "<"   {return '<';}
+">"   {return '>';}
 "|"   {return '|';}
 "%"   {return '%';}
-"["	  {return '[';}
-"]"	  {return ']';}
-"\""  { return '"'; }
-"\\"  { return '\\'; }
-"#"   { return '#'; }
-"."   { return '.'; }
-"["   { return '['; }
-"]"   { return ']'; }
-"'"   { return '\''; }
+"["   {return '[';}
+"]"   {return ']';}
+"#"   {return '#';}
+"."   {return '.';}
+
+\"([^\"\\]|\\.)*\"  {return STR;} 
+
 
 
 {dig}+("."{dig}+)?	{ return NUM;}
